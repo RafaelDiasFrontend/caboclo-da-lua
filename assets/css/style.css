@@ -1,0 +1,235 @@
+
+
+
+/*Folha de Estilo secundária*/
+/*Author: Rafael Dias*/
+
+:root {
+
+    /* Cores */
+   --primary-font: "Montserrat", sans-serif;
+   --primary-bg-gradient: linear-gradient(295deg, rgb(28, 35, 46) 0%, rgb(61, 93, 124) 0%, rgb(44, 26, 54) 100%, rgb(151, 119, 211) 100%);   
+   --primary-color: #13844B;   
+   --text: #212121;
+   --secondary-color: #2e2e2d;
+   --layout-color:rgb(255, 255, 255);
+   --link-color: #297391;   
+   --success: #81C784;    
+  
+   --Cor-do-layout:#fefefe;  
+  
+}
+
+/* Reset */
+
+*, *::before, *::after{
+box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;  
+
+
+}
+
+/* Resets para navegadores antigos */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}body{line-height: 1;}ol, ul {list-style: none;}blockquote, q {quotes: none;}blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}
+
+
+.v-main {
+  background:rgb(255, 255, 255); 
+}
+
+.fade-enter-active, .fade-leave-active { 
+    transition: all .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+  .v-application a {
+   text-decoration: none;
+}
+
+/* repairs vuetify */
+
+.v-text-field--filled > .v-input__control > .v-input__slot, .v-text-field--full-width > .v-input__control > .v-input__slot, .v-text-field--outlined > .v-input__control > .v-input__slot {
+    align-items: stretch;
+   
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .v-text-field.v-text-field--enclosed .v-text-field__details {
+      margin-bottom: 0!important;
+  }
+  
+ 
+.v-btn {
+  text-transform: none!important;
+}
+
+
+.v-text-field input  { 
+  padding-left: 8px!important;
+
+}
+.v-application--is-ltr .v-textarea.v-text-field--enclosed .v-text-field__slot textarea {
+  padding-left: 8px!important;
+}
+.box-shadow-default {
+  box-shadow: 0px 8px 10px #0000001A!important;
+}
+
+.v-btn:not(.v-btn--round).v-size--large {
+    height: 44px;
+    min-width: 78px;
+    padding: 0 19.5555555556px;
+}
+
+
+/* Colors */
+.dark--text {
+  color: #212121!important;
+}
+.orange--custom {
+  color: #F4511E!important;
+}
+
+/* Helpers */
+.w-80 {
+  width: 80%;
+}
+
+
+@media only screen and (min-width: 1905px)  {  
+  .df-width {
+    max-width: 1364px!important;
+    width: 100%!important;
+    margin: 0 auto!important;
+  } 
+}
+
+@media only screen and (max-width: 904px)  {  
+.df-width {    
+  width: 80%!important;    
+} 
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+
+/* Button Saiba Mais */
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+button.learn-more .circle {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #28302E!important;
+  border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: '';
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text { 
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #28302E;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+
+}
+
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+  background: #fff;
+  -webkit-transform: translate(1rem, 0);
+  transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+  color: #fff;
+}
+
